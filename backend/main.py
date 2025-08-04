@@ -61,28 +61,92 @@ MEMES = {
 
 CANCIONES = {
     "gen_z": [
-        "Bad Bunny - Tití Me Preguntó",
-        "Olivia Rodrigo - Good 4 U",
-        "Dua Lipa - Levitating",
-        "The Weeknd - Blinding Lights"
+        {
+            "titulo": "Bad Bunny - Tití Me Preguntó",
+            "youtube_id": "saGYMkzIBXQ",
+            "url": "https://www.youtube.com/watch?v=saGYMkzIBXQ"
+        },
+        {
+            "titulo": "Olivia Rodrigo - Good 4 U",
+            "youtube_id": "gNi_6U5Pm_o",
+            "url": "https://www.youtube.com/watch?v=gNi_6U5Pm_o"
+        },
+        {
+            "titulo": "Dua Lipa - Levitating",
+            "youtube_id": "TUVcZfQe-Kw",
+            "url": "https://www.youtube.com/watch?v=TUVcZfQe-Kw"
+        },
+        {
+            "titulo": "The Weeknd - Blinding Lights",
+            "youtube_id": "4NRXx6U8ABQ",
+            "url": "https://www.youtube.com/watch?v=4NRXx6U8ABQ"
+        }
     ],
     "millennial": [
-        "Backstreet Boys - I Want It That Way",
-        "Britney Spears - Toxic",
-        "Eminem - Lose Yourself",
-        "Beyoncé - Crazy In Love"
+        {
+            "titulo": "Backstreet Boys - I Want It That Way",
+            "youtube_id": "4fndeDfaWCg",
+            "url": "https://www.youtube.com/watch?v=4fndeDfaWCg"
+        },
+        {
+            "titulo": "Britney Spears - Toxic",
+            "youtube_id": "LOZuxwVk7TU",
+            "url": "https://www.youtube.com/watch?v=LOZuxwVk7TU"
+        },
+        {
+            "titulo": "Eminem - Lose Yourself",
+            "youtube_id": "_Yhyp-_hX2s",
+            "url": "https://www.youtube.com/watch?v=_Yhyp-_hX2s"
+        },
+        {
+            "titulo": "Beyoncé - Crazy In Love",
+            "youtube_id": "ViwtNLUqkMY",
+            "url": "https://www.youtube.com/watch?v=ViwtNLUqkMY"
+        }
     ],
     "gen_x": [
-        "Nirvana - Smells Like Teen Spirit",
-        "Queen - Bohemian Rhapsody",
-        "Michael Jackson - Billie Jean",
-        "Madonna - Like a Prayer"
+        {
+            "titulo": "Nirvana - Smells Like Teen Spirit",
+            "youtube_id": "hTWKbfoikeg",
+            "url": "https://www.youtube.com/watch?v=hTWKbfoikeg"
+        },
+        {
+            "titulo": "Queen - Bohemian Rhapsody",
+            "youtube_id": "fJ9rUzIMcZQ",
+            "url": "https://www.youtube.com/watch?v=fJ9rUzIMcZQ"
+        },
+        {
+            "titulo": "Michael Jackson - Billie Jean",
+            "youtube_id": "Zi_XLOBDo_Y",
+            "url": "https://www.youtube.com/watch?v=Zi_XLOBDo_Y"
+        },
+        {
+            "titulo": "Madonna - Like a Prayer",
+            "youtube_id": "79fzeNUqQbQ",
+            "url": "https://www.youtube.com/watch?v=79fzeNUqQbQ"
+        }
     ],
     "boomer": [
-        "The Beatles - Hey Jude",
-        "Led Zeppelin - Stairway to Heaven",
-        "The Rolling Stones - Paint It Black",
-        "Bob Dylan - Like a Rolling Stone"
+        {
+            "titulo": "The Beatles - Hey Jude",
+            "youtube_id": "A_MjCqQoLLA",
+            "url": "https://www.youtube.com/watch?v=A_MjCqQoLLA"
+        },
+        {
+            "titulo": "Led Zeppelin - Stairway to Heaven",
+            "youtube_id": "QkF3oxziUI4",
+            "url": "https://www.youtube.com/watch?v=QkF3oxziUI4"
+        },
+        {
+            "titulo": "The Rolling Stones - Paint It Black",
+            "youtube_id": "O4irXQhgMqg",
+            "url": "https://www.youtube.com/watch?v=O4irXQhgMqg"
+        },
+        {
+            "titulo": "Bob Dylan - Like a Rolling Stone",
+            "youtube_id": "IwOfCgkyEj0",
+            "url": "https://www.youtube.com/watch?v=IwOfCgkyEj0"
+        }
     ]
 }
 
