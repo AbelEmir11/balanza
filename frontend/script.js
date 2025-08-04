@@ -1,5 +1,5 @@
 // URL de tu API - cambia esto cuando hagas deployment
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = 'https://balanza-yg8u.onrender.com';
 
 // Elementos del DOM
 const form = document.getElementById('balanzaForm');
