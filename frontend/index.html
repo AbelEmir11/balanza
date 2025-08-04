@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanza del Entretenimiento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Balanza del Entretenimiento ⚖️</h1>
+            <p>Descubre tu meme y canción perfecta basada en tus datos</p>
+        </header>
+
+        <div class="form-container">
+            <form id="balanzaForm">
+                <div class="form-group">
+                    <label for="sexo">Género:</label>
+                    <select id="sexo" name="sexo" required>
+                        <option value="">Selecciona tu género</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                        <option value="prefiero_no_decir">Prefiero no decir</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" min="1" max="120" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="altura">Altura (metros):</label>
+                    <input type="number" id="altura" name="altura" step="0.01" min="0.5" max="3.0" placeholder="ej: 1.75" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" name="peso" step="0.1" min="10" max="500" placeholder="ej: 70" required>
+                </div>
+
+                <button type="submit" id="calcularBtn">
+                    <span id="btnText">🎯 Calcular mi Balanza</span>
+                    <span id="spinner" class="spinner hidden">⏳</span>
+                </button>
+            </form>
+        </div>
+
+        <div id="resultado" class="resultado hidden">
+            <div class="resultado-header">
+                <h2>🎉 Tu Resultado Personal</h2>
+            </div>
+            
+            <div class="resultado-grid">
+                <div class="resultado-card imc-card">
+                    <h3>📊 Tu IMC</h3>
+                    <div class="imc-valor" id="imcValor"></div>
+                    <div class="imc-categoria" id="imcCategoria"></div>
+                </div>
+
+                <div class="resultado-card generacion-card">
+                    <h3>🎂 Tu Generación</h3>
+                    <div class="generacion-valor" id="generacionValor"></div>
+                </div>
+
+                <div class="resultado-card meme-card">
+                    <h3>😂 Tu Meme</h3>
+                    <div class="meme-contenido" id="memeContenido"></div>
+                </div>
+
+                <div class="resultado-card cancion-card">
+                    <h3>🎵 Tu Canción</h3>
+                    <div class="cancion-contenido" id="cancionContenido"></div>
+                </div>
+            </div>
+
+            <div class="mensaje-motivacional">
+                <h3>💪 Mensaje para vos</h3>
+                <p id="mensajeMotivacional"></p>
+            </div>
+
+            <button id="nuevaConsulta" class="btn-secondary">
+                🔄 Hacer otra consulta
+            </button>
+        </div>
+
+        <div id="error" class="error hidden">
+            <div class="error-content">
+                <h3>😅 Oops! Algo salió mal</h3>
+                <p id="errorMessage"></p>
+                <button id="cerrarError" class="btn-secondary">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Hecho con ❤️ para diversión y aprendizaje</p>
+        <p>Backend: FastAPI | Frontend: Vanilla JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
