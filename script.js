@@ -113,6 +113,27 @@ function showResult(data) {
     document.getElementById('memeContenido').textContent = data.meme;
     document.getElementById('cancionContenido').textContent = data.cancion;
     document.getElementById('mensajeMotivacional').textContent = data.mensaje_motivacional;
+// Mostrar canción con reproductor de YouTube
+    const cancionContainer = document.getElementById('cancionContenido');
+    cancionContainer.innerHTML = `
+        <div class="cancion-info">
+            <h4>${data.cancion.titulo}</h4>
+            <div class="youtube-player">
+                <iframe width="100%" height="200" 
+                    src="https://www.youtube.com/embed/${data.cancion.youtube_id}" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <a href="${data.cancion.url}" target="_blank" class="youtube-link">
+                🎵 Ver en YouTube
+            </a>
+        </div>
+    `;
+    
+    document.getElementById('mensajeMotivacional').textContent = data.mensaje_motivacional;
 
     // Mostrar el resultado con animación
     hideError();

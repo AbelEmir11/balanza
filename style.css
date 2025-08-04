@@ -230,6 +230,38 @@ button:active {
     border-radius: 10px;
 }
 
+.cancion-info h4 {
+    margin-bottom: 15px;
+    color: #E91E63;
+    font-size: 1.1em;
+}
+
+.youtube-player {
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.youtube-player iframe {
+    border-radius: 10px;
+}
+
+.youtube-link {
+    display: inline-block;
+    color: #E91E63;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.youtube-link:hover {
+    color: #ad1457;
+    text-decoration: underline;
+}
+
+
 .mensaje-motivacional {
     background: linear-gradient(135deg, #4CAF50, #45a049);
     color: white;
