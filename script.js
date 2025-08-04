@@ -1,4 +1,4 @@
-// URL de tu API - cambia esto cuando hagas deployment
+// URL API
 const API_URL = 'https://balanza-yg8u.onrender.com';
 
 // Elementos del DOM
@@ -70,18 +70,18 @@ function validateData(data) {
         return false;
     }
 
-    if (data.edad < 1 || data.edad > 120) {
-        showError('La edad debe estar entre 1 y 120 años');
+    if (data.edad < 1 || data.edad > 100) {
+        showError('La edad debe estar entre 1 y 100 años');
         return false;
     }
 
-    if (data.altura < 0.5 || data.altura > 3.0) {
-        showError('La altura debe estar entre 0.5 y 3.0 metros');
+    if (data.altura < 0.5 || data.altura > 2.50) {
+        showError('La altura debe estar entre 0.5 y 2.50 metros');
         return false;
     }
 
-    if (data.peso < 10 || data.peso > 500) {
-        showError('El peso debe estar entre 10 y 500 kg');
+    if (data.peso < 10 || data.peso > 350) {
+        showError('El peso debe estar entre 10 y 350 kg');
         return false;
     }
 
