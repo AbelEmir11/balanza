@@ -21,6 +21,12 @@ app.add_middleware(
 )
 
 # Modelos de datos
+
+class CancionModel(BaseModel):
+    titulo: str
+    youtube_id: str
+    url: str
+
 class UserData(BaseModel):
     sexo: str
     edad: int
@@ -32,7 +38,7 @@ class BalanzaResponse(BaseModel):
     categoria_imc: str
     generacion: str
     meme: str
-    cancion: str
+    cancion: CancionModel
     mensaje_motivacional: str
 
 # Base de datos en memoria (luego podemos expandir)
