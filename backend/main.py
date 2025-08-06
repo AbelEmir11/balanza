@@ -12,7 +12,7 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.mount("/imagenes", StaticFiles(directory="c:/proyectos_vscode/balanza/imagenes"), name="imagenes")
+app.mount("/imagenes", StaticFiles(directory="imagenes"), name="imagenes")
 
 
 # Configurar CORS para permitir requests desde el frontend
@@ -53,11 +53,11 @@ class UserData(BaseModel):
 MEMES = {
     "bajo_peso": [
        {
-            "url": "/imagenes/flacolila.webp",
+            "url":"https://www.bing.com/images/search?view=detailV2&ccid=DRSXLYH%2f&id=49F4F9618BD90B07D64E936EA1702F28DF82A5E4&thid=OIP.DRSXLYH_M7X8pcyU9sccaAHaH5&mediaurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f12%2fc4%2f85%2f12c485bc197d4108091d532ecb632177.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.0d14972d81ff33b5fca5cc94f6c71c68%3frik%3d5KWC3ygvcKFukw%26pid%3dImgRaw%26r%3d0&exph=1494&expw=1400&q=personaje+alto+y+flaco&FORM=IRPRST&ck=270E2E7EDEC647B7C9A6D26FAA15ABFB&selectedIndex=0&itb=0",
             "alt": "Meme de persona delgada"
         },
         {
-            "url": "https://i.imgflip.com/2/2fm6x.jpg",
+            "url": "https://tse4.mm.bing.net/th/id/OIP.8Ej3XE6J_9eYHRULYGRg5QHaMb?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
             "alt": "Meme skinny person"
         },
         
