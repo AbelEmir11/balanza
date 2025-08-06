@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, List
+from fastapi.staticfiles import StaticFiles
 import random
 
 # Inicializar FastAPI
@@ -10,6 +11,9 @@ app = FastAPI(
     description="Una API que devuelve memes y canciones basados en datos del usuario",
     version="1.0.0"
 )
+
+app.mount("/imagenes", StaticFiles(directory="c:/proyectos_vscode/balanza/imagenes"), name="imagenes")
+
 
 # Configurar CORS para permitir requests desde el frontend
 app.add_middleware(
@@ -26,41 +30,76 @@ class CancionModel(BaseModel):
     youtube_id: str
     url: str
 
+class MemeModel(BaseModel):
+    url: str
+    alt: str
+
+class BalanzaResponse(BaseModel):
+    imc: float
+    categoria_imc: str
+    generacion: str
+    meme: MemeModel
+    cancion: CancionModel
+    mensaje_motivacional: str
+
 class UserData(BaseModel):
     sexo: str
     edad: int
     altura: float  # en metros
     peso: float    # en kg
 
-class BalanzaResponse(BaseModel):
-    imc: float
-    categoria_imc: str
-    generacion: str
-    meme: str
-    cancion: CancionModel  # Ahora usa el modelo específico
-    mensaje_motivacional: str
 
 # Base de datos en memoria (luego podemos expandir)
 MEMES = {
     "bajo_peso": [
-        "¿Seguro que no eres un espagueti con ojos? 🍝",
-        "Eres tan delgado que cuando te pones de perfil desapareces",
-        "Tu IMC dice que necesitas más pizza en tu vida 🍕"
+       {
+            "url": "/imagenes/flacolila.webp",
+            "alt": "Meme de persona delgada"
+        },
+        {
+            "url": "https://i.imgflip.com/2/2fm6x.jpg",
+            "alt": "Meme skinny person"
+        },
+        
     ],
     "normal": [
-        "Perfectamente balanceado, como todo debería ser - Thanos",
-        "Eres el golden retriever de los IMCs ✨",
-        "Tu cuerpo: ✅ Tu actitud: esperamos que también ✅"
+        {
+            "url": "https://i.imgflip.com/2/1bij.jpg",
+            "alt": "Meme perfectamente balanceado como todo debería ser"
+        },
+        {
+            "url": "/imagenes/peso_normal.jpg",
+            "alt": "Meme peso saludable"
+        },
+     
     ],
-    "sobrepeso": [
-        "Eres thicc y eso está de moda 💪",
-        "Más para abrazar 🤗",
-        "Tu personalidad pesa más que tu cuerpo ❤️"
+   "sobrepeso": [
+        {
+            "url": "https://i.imgflip.com/2/5c7lwq.jpg",
+            "alt": "Meme thicc"
+        },
+        {
+            "url": "/imagenes/no gordas.webp",
+            "alt": "Meme motivacional sobrepeso"
+        },
+        {
+            "url": "https://i.imgflip.com/2/1otk96.jpg",
+            "alt": "Meme body positive"
+        }
     ],
     "obesidad": [
-        "Eres grande en todos los sentidos 👑",
-        "Tu corazón es más grande que tu cintura ❤️",
-        "Recuerda: eres más que un número en una balanza"
+        {
+            "url": "https://i.imgflip.com/2/2y3ez.jpg",
+            "alt": "Meme motivacional obesidad"
+        },
+        {
+            "url": "/imagenes/no gordas.webp",
+            "alt": "Meme corazón grande"
+        },
+        {
+            "url": "https://i.imgflip.com/2/1g8my4.jpg",
+            "alt": "Meme más que un número"
+        }
     ]
 }
 
@@ -361,4 +400,8 @@ async def get_stats():
         "generaciones": list(CANCIONES.keys())
     }
 
+@app.get("/test-memes")
+async def test_memes():
+    """Endpoint para probar que los memes se están sirviendo correctamente"""
+    return MEMES
 # Para ejecutar: uvicorn main:app --reload
