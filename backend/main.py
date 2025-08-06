@@ -21,14 +21,9 @@ app.add_middleware(
 )
 
 # Modelos de datos
-
 class CancionModel(BaseModel):
     titulo: str
     youtube_id: str
-    url: str
-
-class memeModel(BaseModel):
-    id: str
     url: str
 
 class UserData(BaseModel):
@@ -41,120 +36,131 @@ class BalanzaResponse(BaseModel):
     imc: float
     categoria_imc: str
     generacion: str
-    meme: memeModel
-    cancion: CancionModel
+    meme: str
+    cancion: CancionModel  # Ahora usa el modelo específico
     mensaje_motivacional: str
 
 # Base de datos en memoria (luego podemos expandir)
 MEMES = {
     "bajo_peso": [
-        {"id": "1", "url": "https://tse1.explicit.bing.net/th/id/OIP.Y4HQsmmx7hFO0wg6nxBndAHaEK?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3"},
-        {"id": "2", "url": "https://images3.memedroid.com/images/UPLOADED67/5f32e45c441cb.jpeg"},
-        {"id": "3", "url": "https://th.bing.com/th/id/R.086dbb7aac296f9ef116edca95085571?rik=QGPtsPerVMAxhg&riu=http%3a%2f%2fimg.desmotivaciones.es%2f201104%2fflaco.jpg&ehk=yS7Jc5tXGiwmaCShKh%2fFRXC1Z4dDAc2pUjarG1%2fbf2A%3d&risl=&pid=ImgRaw&r=0"},
-        {"id": "4", "url": "https://i.pinimg.com/originals/12/c4/85/12c485bc197d4108091d532ecb632177.jpg"},
-        {"id": "5", "url": "https://de.toonpool.com/user/30065/files/angel_1440585.jpg"},
-        {"id": "6", "url": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3dc557ad-2f57-47ae-af44-9b5be08f9618/d6t5x0y-642c30f1-ddfa-4ca5-9c20-4cd6f4f4f0ed.png/v1/fill/w_1600,h_2682/gotenks_flaco_by_edicionesz3000_d6t5x0y-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjY4MiIsInBhdGgiOiJcL2ZcLzNkYzU1N2FkLTJmNTctNDdhZS1hZjQ0LTliNWJlMDhmOTYxOFwvZDZ0NXgweS02NDJjMzBmMS1kZGZhLTRjYTUtOWMyMC00Y2Q2ZjRmNGYwZWQucG5nIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Wu05f67eFD-1H7fOa9bugxWVqaL1VYlLhMyar0iH3k0"},
-        {"id": "7", "url": "https://editorialtelevisa.brightspotcdn.com/dims4/default/f449c94/2147483647/strip/true/crop/1300x732+0+123/resize/2000x1126!/quality/90/?url=https:%2F%2Fk2-prod-editorial-televisa.s3.us-east-1.amazonaws.com%2Fbrightspot%2F66%2Fd1%2Fc3730328464389c185e9f7aa66ba%2Fdon-ramon.jpg"}
-       
+        "¿Seguro que no eres un espagueti con ojos? 🍝",
+        "Eres tan delgado que cuando te pones de perfil desapareces",
+        "Tu IMC dice que necesitas más pizza en tu vida 🍕"
     ],
     "normal": [
-        {"id": "1", "url": "https://www.descargarstickers.com/src_img/2021/06/229092.png"},
-        {"id": "2", "url": "https://content.imageresizer.com/images/memes/giga-chad-meme-2.jpg"},
-        {"id": "3", "url": "https://i.ytimg.com/vi/44Ys70LUoaY/hqdefault.jpg"},
-        
+        "Perfectamente balanceado, como todo debería ser - Thanos",
+        "Eres el golden retriever de los IMCs ✨",
+        "Tu cuerpo: ✅ Tu actitud: esperamos que también ✅"
     ],
     "sobrepeso": [
-        {"id": "1", "url": "https://i.pinimg.com/originals/4a/ff/24/4aff24d54648d111811896ae08789b37.jpg"},
-        {"id": "2", "url": "https://elcomercio.pe/resizer/NAsXKTfR1BLDRcmQGtyAPn-kM7g=/1200x900/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/ORV5KBDO7NCSFJJCR6N6SFH46Y.jpg"},
-        {"id": "3", "url": "https://i.pinimg.com/originals/7a/93/72/7a9372bdb0eb16936230eec6d3d4fc2f.jpg"},
-        {"id": "4", "url": "https://cdn.verbub.com/images/y-como-vas-con-la-dieta-97779.jpg"},
-        {"id": "5", "url": "https://cdn.memegenerator.es/imagenes/memes/full/31/78/31781146.jpg"},
-        {"id": "6", "url": "https://cdn2.actitudfem.com/media/files/media/files/meme-comida-1.jpg"},
+        "Eres thicc y eso está de moda 💪",
+        "Más para abrazar 🤗",
+        "Tu personalidad pesa más que tu cuerpo ❤️"
     ],
     "obesidad": [
-        {"id": "1", "url": "https://http2.mlstatic.com/D_NQ_NP_994628-MLM76997310240_062024-O.webp"},
-        {"id": "2", "url": "https://i.pinimg.com/originals/8b/1c/4d/8b1c4d3f4f4f4f4f4f4f4f4f4f4f4f4f.jpg"},
-        {"id": "3", "url": "https://i.pinimg.com/originals/9c/2d/5e/9c2d5e6f7f8f9fa0b0b0b0b0b0b0b0b0.jpg"},
-        {"id": "4", "url": "https://i.pinimg.com/originals/ad/3e/1f/ad3e1f2f3f4f5f6f7f8f9fa0b0b0b0b0.jpg"},
-        {"id": "5", "url": "https://i.pinimg.com/originals/bd/4e/2c/bd4e2c3d4e5f6f7f8f9fa0b0b0b0b0b0.jpg"},
-        {"id": "6", "url": "https://i.pinimg.com/originals/cd/5f/3d/cd5f3d4e5f6f7f8f9fa0b0b0b0b0b0b.jpg"},
+        "Eres grande en todos los sentidos 👑",
+        "Tu corazón es más grande que tu cintura ❤️",
+        "Recuerda: eres más que un número en una balanza"
     ]
 }
 
+# Easter eggs - Combinaciones específicas de género + IMC + generación
 COMBINACION_CANCIONES = {
     "femenino_bajo_peso": [
         {
             "titulo": "Jarabe de Palo - La Flaca",
             "youtube_id": "HhZaHf8RP6g",
-            "url": "https://youtu.be/r2g0pM3PMNQ?t=21"
+            "url": "https://www.youtube.com/watch?v=HhZaHf8RP6g"
         },
         {
             "titulo": "Luis Alberto Spinetta - Flaca",
             "youtube_id": "tZkouut-9RQ",
-            "url": "https://youtu.be/UCF9oHXhDMU?t=26"
+            "url": "https://www.youtube.com/watch?v=tZkouut-9RQ"
         }
     ],
-
-    "femenino_obesidad": [
+    "masculino_obesidad_millennial": [
         {
-             "titulo": "Oye Gelda",
+            "titulo": "Wisin & Yandel - Oye Gelda",
             "youtube_id": "9Z0hmnHnRR8",
-            "url": "https://youtu.be/KhnqGEPyBUg?t=8"
-            
-        },
+            "url": "https://www.youtube.com/watch?v=9Z0hmnHnRR8"
+        }
     ],
-    "femenino_sobrepeso": [
-         {
+    "femenino_obesidad_gen_z": [
+        {
+            "titulo": "Lizzo - About Damn Time",
+            "youtube_id": "nQwuakxYUR4",
+            "url": "https://www.youtube.com/watch?v=nQwuakxYUR4"
+        },
+        {
             "titulo": "Meghan Trainor - All About That Bass",
             "youtube_id": "7PCkvCPvDXk",
             "url": "https://www.youtube.com/watch?v=7PCkvCPvDXk"
         }
-
     ],
-
-    "masculino_obesidad": [
+    "masculino_bajo_peso_gen_z": [
         {
-            "titulo": "megapanza - i love roquefort",
-            "youtube_id": "9Z0hmnHnRR8",
-            "url": "https://youtu.be/UW1DjRSuU4g?t=102"
-        },
-        {
-            "titulo": "Megapanza - yo como lechon",
-            "youtube_id": "wnJ6LuUFoAw",  
-            "url": "https://youtu.be/UW1DjRSuU4g?t=124"
-        }
-
-
-    ],
-    
-    "masculino_bajo_peso": [
-        {
-            "titulo": "Mon Laferte - flaco",
+            "titulo": "Bruno Mars - Count On Me",
             "youtube_id": "CRsXwuuQbao",
-            "url": "https://youtu.be/BtZlp9V7Woc?t=68"
-        }],
-    "masculino_bajo_peso_boomer":[
+            "url": "https://www.youtube.com/watch?v=CRsXwuuQbao"
+        },
         {
-            "titulo": "Luis Aguile - amor de flacos",
+            "titulo": "Ed Sheeran - Shape of You",
             "youtube_id": "JGwWNGJdvx8",
-            "url": "https://youtu.be/2a4OK5M1B_c?t=14"
+            "url": "https://www.youtube.com/watch?v=JGwWNGJdvx8"
         }
     ],
-    "masculino_sobrepeso": [
-       {
-            "titulo": "Somewhere over the Rainbow - Israel IZ Kamakawiwoole",
-            "youtube_id": "kpSFE88dCQ8",
-            "url": "https://youtu.be/V1bFr2SWP1I?t=17"
+    "femenino_normal_millennial": [
+        {
+            "titulo": "Alanis Morissette - You Oughta Know",
+            "youtube_id": "NPcyTyilmYY",
+            "url": "https://www.youtube.com/watch?v=NPcyTyilmYY"
         },
         {
-            "titulo": "skibidi doo",
-            "youtube_id": "5F4wZWfSdD8",
-            "url": "https://youtu.be/s4wTiYJeA68"
-        },
+            "titulo": "No Doubt - Just a Girl",
+            "youtube_id": "PHzOOQfhPFg",
+            "url": "https://www.youtube.com/watch?v=PHzOOQfhPFg"
+        }
     ]
-    
 }
 
+# Canciones especiales por categoría de IMC (tienen prioridad intermedia)
+CANCIONES_ESPECIALES_IMC = {
+    "obesidad": [
+        {
+            "titulo": "Wisin & Yandel - Oye Gelda",
+            "youtube_id": "9Z0hmnHnRR8",
+            "url": "https://www.youtube.com/watch?v=9Z0hmnHnRR8"
+        },
+        {
+            "titulo": "Violeta Parra - Mazúrquica Modérnica",
+            "youtube_id": "5F4wZWfSdD8",
+            "url": "https://www.youtube.com/watch?v=5F4wZWfSdD8"
+        },
+        {
+            "titulo": "La Sonora Dinamita - El Gordito Bonito",
+            "youtube_id": "kpSFE88dCQ8",
+            "url": "https://www.youtube.com/watch?v=kpSFE88dCQ8"
+        }
+    ],
+    "bajo_peso": [
+        {
+            "titulo": "Daddy Yankee - Gasolina",
+            "youtube_id": "qGKrc3A6HHM",
+            "url": "https://www.youtube.com/watch?v=qGKrc3A6HHM"
+        },
+        {
+            "titulo": "Alvaro Soler - El Mismo Sol",
+            "youtube_id": "1juts-h7VzU",
+            "url": "https://www.youtube.com/watch?v=1juts-h7VzU"
+        },
+        {
+            "titulo": "Manu Chao - Me Gustas Tu",
+            "youtube_id": "rs6Y4kZ8qtw",
+            "url": "https://www.youtube.com/watch?v=rs6Y4kZ8qtw"
+        }
+    ]
+    # "normal" y "sobrepeso" usarán las canciones normales por generación
+}
 
 CANCIONES = {
     "gen_z": [
@@ -309,22 +315,25 @@ async def calcular_balanza(user_data: UserData):
         
         # Seleccionar contenido aleatorio
         meme = random.choice(MEMES[categoria_imc])
-
-         # Lógica de selección de canción con sistema de prioridades:
-        # 1. MÁXIMA PRIORIDAD: Easter eggs (género + IMC + generación)
         
+        # Lógica de selección de canción:
+        # 1. PRIORIDAD MÁXIMA: Combinaciones específicas (género + IMC o género + IMC + generación)
         # 2. PRIORIDAD BAJA: Canciones normales por generación
         
         cancion = None
         
-        # 1. Buscar combinacion específica
-        easter_egg_key = f"{user_data.sexo}_{categoria_imc}_{generacion}"
-        if easter_egg_key in COMBINACION_CANCIONES:
-            cancion = random.choice(COMBINACION_CANCIONES[easter_egg_key])
-          
+        # 1. Buscar combinación específica con generación
+        combinacion_key = f"{user_data.sexo}_{categoria_imc}_{generacion}"
+        if combinacion_key in COMBINACION_CANCIONES:
+            cancion = random.choice(COMBINACION_CANCIONES[combinacion_key])
         
-        # Si no hay combinacion específica, buscar por generacion
+        # Si no hay combinación específica, buscar por género + IMC
+        if not cancion:
+            combinacion_key_simple = f"{user_data.sexo}_{categoria_imc}"
+            if combinacion_key_simple in COMBINACION_CANCIONES:
+                cancion = random.choice(COMBINACION_CANCIONES[combinacion_key_simple])
         
+        # 2. Si no hay combinación, usar canción normal por generación
         if not cancion:
             cancion = random.choice(CANCIONES[generacion])
             

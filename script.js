@@ -110,17 +110,23 @@ function showResult(data) {
     document.getElementById('imcValor').textContent = data.imc;
     document.getElementById('imcCategoria').textContent = data.categoria_imc;
     document.getElementById('generacionValor').textContent = data.generacion;
-    document.getElementById('memeContenido').textContent = data.meme;
-    document.getElementById('cancionContenido').textContent = data.cancion;
-    document.getElementById('mensajeMotivacional').textContent = data.mensaje_motivacional;
-// Mostrar canción con reproductor de YouTube
+   
+     const memeContainer = document.getElementById('memeContenido');
+    memeContainer.innerHTML = `
+        <div class="meme-imagen-container">
+            <img src="${data.meme.url}" alt="Meme" class="meme-imagen" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="meme-error" style="display:none;">😅 Imagen no disponible</div>
+        </div>
+    `;
+    
+    // Mostrar canción con reproductor de YouTube
     const cancionContainer = document.getElementById('cancionContenido');
     cancionContainer.innerHTML = `
         <div class="cancion-info">
             <h4>${data.cancion.titulo}</h4>
             <div class="youtube-player">
                 <iframe width="100%" height="200" 
-                    src="https://www.youtube.com/embed/${data.cancion.youtube_id}" 
+                    src="https://www.youtube.com/embed/${data.cancion.youtube_id}?autoplay=1&mute=0" 
                     title="YouTube video player" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -132,7 +138,7 @@ function showResult(data) {
             </a>
         </div>
     `;
-    
+
     document.getElementById('mensajeMotivacional').textContent = data.mensaje_motivacional;
 
     // Mostrar el resultado con animación
