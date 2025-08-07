@@ -2,17 +2,15 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Dict, List
-from fastapi.staticfiles import StaticFiles
 import random
 
 # Inicializar FastAPI
 app = FastAPI(
     title="Balanza del Entretenimiento API",
     description="Una API que devuelve memes y canciones basados en datos del usuario",
-    version="1.0.0"
+    version="2.2.0"
 )
 
-app.mount("/imagenes", StaticFiles(directory="imagenes"), name="imagenes")
 
 
 # Configurar CORS para permitir requests desde el frontend
