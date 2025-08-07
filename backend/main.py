@@ -121,27 +121,28 @@ COMBINACION_CANCIONES = {
     "femenino_bajo_peso": [
         {
             "titulo": "Jarabe de Palo - La Flaca",
-            "youtube_id": "HhZaHf8RP6g",
+            "youtube_id": "r2g0pM3PMNQ",
             "url": "https://youtu.be/r2g0pM3PMNQ?t=20"
         },
         {
             "titulo": "Luis Alberto Spinetta - Flaca",
-            "youtube_id": "tZkouut-9RQ",
+            "youtube_id": "9Z0hmnHn6",
             "url": "https://youtu.be/UCF9oHXhDMU?t=26"
         }
     ],
     "masculino_obesidad_millennial": [
         {
             "titulo": "Oye Gelda",
-            "youtube_id": "9Z0hmnHnRR8",
-            "url": "https://youtu.be/KhnqGEPyBUg?t=9"
+            "youtube_id": "9Z0hmnHnRR7",
+            "url": "https://www.youtube.com/shorts/D52TBfdwfMs?feature=share"
         }
     ],
     "femenino_obesidad_gen_z": [
         {
             "titulo": "oye gelda",
-            "youtube_id": "nQwuakxYUR4",
-            "url": "https://youtu.be/KhnqGEPyBUg?t=9"
+            "youtube_id": "9Z0hmnHnRR9",
+            "url": "https://www.youtube.com/shorts/D52TBfdwfMs?feature=share"
+            
         },
         {
             "titulo": "Meghan Trainor - All About That Bass",
@@ -152,25 +153,21 @@ COMBINACION_CANCIONES = {
     "masculino_bajo_peso_gen_z": [
         {
             "titulo": "Mon Laferte - flaco",
-            "youtube_id": "CRsXwuuQbao",
+            "youtube_id": "BtZlp9V7Woc",
             "url": "https://youtu.be/BtZlp9V7Woc?t=73"
         },
         {
             "titulo": "Luis Aguile - flaco no me dejes",
-            "youtube_id": "JGwWNGJdvx8",
+            "youtube_id": "eMwy4hDaEvg",
             "url": "https://youtu.be/eMwy4hDaEvg?t=14"
         }
     ],
     
-}
-
-# Canciones especiales por categoría de IMC (tienen prioridad intermedia)
-CANCIONES_ESPECIALES_IMC = {
     "obesidad": [
         {
             "titulo": "Oye Gelda",
             "youtube_id": "9Z0hmnHnRR8",
-            "url": "https://youtu.be/KhnqGEPyBUg?t=8"
+            "url": "https://www.youtube.com/shorts/t4pFTbz1Ejw?feature=share"
         },
         {
             "titulo": "Somewhere over the Rainbow - Israel Kamakawiwoole",
@@ -196,19 +193,16 @@ CANCIONES_ESPECIALES_IMC = {
             "youtube_id": "YbJOTdZBX1g",    
             "url": "https://youtu.be/UW1DjRSuU4g?t=102"
         },
-        
-
-
     ]
-    # "normal" y "sobrepeso" usarán las canciones normales por generación
+
 }
 
 CANCIONES = {
     "gen_z": [
         {
-            "titulo": "Bad Bunny - Tití Me Preguntó",
+            "titulo": "Billie Eilish - bad guy",
             "youtube_id": "saGYMkzIBXQ",
-            "url": "https://www.youtube.com/watch?v=saGYMkzIBXQ"
+            "url": "https://youtu.be/DyDfgMOUjCI?t=17"
         },
         {
             "titulo": "Olivia Rodrigo - Good 4 U",
