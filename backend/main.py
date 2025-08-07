@@ -338,7 +338,7 @@ async def root():
     return {
         "mensaje": "¡Bienvenido a la Balanza del Entretenimiento! 🎵",
         "docs": "/docs",
-        "version": "1.0.0"
+        "version": "2.2.0"
     }
 
 @app.post("/balanza", response_model=BalanzaResponse)
