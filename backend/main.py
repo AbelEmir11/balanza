@@ -163,7 +163,7 @@ COMBINACION_CANCIONES = {
         }
     ],
     
-    "obesidad": [
+    "masculino_obesidad": [
         {
             "titulo": "Oye Gelda",
             "youtube_id": "9Z0hmnHnRR8",
@@ -181,11 +181,11 @@ COMBINACION_CANCIONES = {
         }
     ],
     
-    "sobrepeso": [
+    "masculino_sobrepeso": [
         {
             "titulo": "Megapanza - yo como lechon",
             "youtube_id": "9Z0hmnHnRR8",
-            "url": "https://youtu.be/UW1DjRSuU4g?t=125"
+            "url": "https://youtu.be/SQuxreAtFFc"
             
         },
         {
@@ -199,11 +199,7 @@ COMBINACION_CANCIONES = {
 
 CANCIONES = {
     "gen_z": [
-        {
-            "titulo": "Billie Eilish - bad guy",
-            "youtube_id": "saGYMkzIBXQ",
-            "url": "https://youtu.be/DyDfgMOUjCI?t=17"
-        },
+       
         {
             "titulo": "Olivia Rodrigo - Good 4 U",
             "youtube_id": "gNi_6U5Pm_o",
