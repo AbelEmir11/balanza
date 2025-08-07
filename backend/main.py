@@ -64,40 +64,44 @@ MEMES = {
     ],
     "normal": [
         {
-            "url": "https://i.imgflip.com/2/1bij.jpg",
+            "url": "https://i.ytimg.com/vi/44Ys70LUoaY/hqdefault.jpg",
             "alt": "Meme perfectamente balanceado como todo debería ser"
         },
         {
-            "url": "/imagenes/peso_normal.jpg",
+            "url": "https://i.ytimg.com/vi/Chtt48t3Fns/maxresdefault.jpg",
             "alt": "Meme peso saludable"
         },
      
     ],
    "sobrepeso": [
         {
-            "url": "https://i.imgflip.com/2/5c7lwq.jpg",
+            "url": "https://tse4.mm.bing.net/th/id/OIP.hr3BPVZxMyIeMHpQy1qpLQAAAA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
             "alt": "Meme thicc"
         },
         {
-            "url": "/imagenes/no gordas.webp",
+            "url": "https://tse3.mm.bing.net/th/id/OIP.yCBxE4RPOiDzM8KAl7rpVwHaHa?r=0&cb=thfvnext&w=500&h=500&rs=1&pid=ImgDetMain&o=7&rm=3",
             "alt": "Meme motivacional sobrepeso"
         },
         {
-            "url": "https://i.imgflip.com/2/1otk96.jpg",
+            "url": "https://preview.redd.it/yo-si-subo-gordas-v0-g1dlz3czxmxc1.png?auto=webp&s=3838ca08e2abb21a9737ac70bfd5d31bdb9e8dba",
             "alt": "Meme body positive"
-        }
+        },
+        {
+            "url": "https://i.pinimg.com/736x/bc/3f/69/bc3f69e41767ca2d1e4827d685d26c81.jpg",
+            "alt": "Meme gordito feliz"
+        },
     ],
     "obesidad": [
         {
-            "url": "https://i.imgflip.com/2/2y3ez.jpg",
+            "url": "https://th.bing.com/th/id/R.ee54ac4cbf9388419bd5b87a46c0c70c?rik=ndTVn4SFdW1X7w&riu=http%3a%2f%2fimages3.memedroid.com%2fimages%2fUPLOADED218%2f62c388abd26f1.jpeg&ehk=mRoRzLWWdfOjVu%2fP8LK9%2fah580lbWFeJ3t5PGxErsZI%3d&risl=&pid=ImgRaw&r=0",
             "alt": "Meme motivacional obesidad"
         },
         {
-            "url": "/imagenes/no gordas.webp",
+            "url": "https://tse3.mm.bing.net/th/id/OIP.San-p5QVCbZ_frq3X5St-wHaIm?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
             "alt": "Meme corazón grande"
         },
         {
-            "url": "https://i.imgflip.com/2/1g8my4.jpg",
+            "url": "https://http2.mlstatic.com/D_NQ_NP_994628-MLM76997310240_062024-O.webp",
             "alt": "Meme más que un número"
         }
     ]
@@ -109,26 +113,26 @@ COMBINACION_CANCIONES = {
         {
             "titulo": "Jarabe de Palo - La Flaca",
             "youtube_id": "HhZaHf8RP6g",
-            "url": "https://www.youtube.com/watch?v=HhZaHf8RP6g"
+            "url": "https://youtu.be/r2g0pM3PMNQ?t=20"
         },
         {
             "titulo": "Luis Alberto Spinetta - Flaca",
             "youtube_id": "tZkouut-9RQ",
-            "url": "https://www.youtube.com/watch?v=tZkouut-9RQ"
+            "url": "https://youtu.be/UCF9oHXhDMU?t=26"
         }
     ],
     "masculino_obesidad_millennial": [
         {
-            "titulo": "Wisin & Yandel - Oye Gelda",
+            "titulo": "Oye Gelda",
             "youtube_id": "9Z0hmnHnRR8",
-            "url": "https://www.youtube.com/watch?v=9Z0hmnHnRR8"
+            "url": "https://youtu.be/KhnqGEPyBUg?t=9"
         }
     ],
     "femenino_obesidad_gen_z": [
         {
-            "titulo": "Lizzo - About Damn Time",
+            "titulo": "oye gelda",
             "youtube_id": "nQwuakxYUR4",
-            "url": "https://www.youtube.com/watch?v=nQwuakxYUR4"
+            "url": "https://youtu.be/KhnqGEPyBUg?t=9"
         },
         {
             "titulo": "Meghan Trainor - All About That Bass",
@@ -138,42 +142,31 @@ COMBINACION_CANCIONES = {
     ],
     "masculino_bajo_peso_gen_z": [
         {
-            "titulo": "Bruno Mars - Count On Me",
+            "titulo": "Mon Laferte - flaco",
             "youtube_id": "CRsXwuuQbao",
-            "url": "https://www.youtube.com/watch?v=CRsXwuuQbao"
+            "url": "https://youtu.be/BtZlp9V7Woc?t=73"
         },
         {
-            "titulo": "Ed Sheeran - Shape of You",
+            "titulo": "Luis Aguile - flaco no me dejes",
             "youtube_id": "JGwWNGJdvx8",
-            "url": "https://www.youtube.com/watch?v=JGwWNGJdvx8"
+            "url": "https://youtu.be/eMwy4hDaEvg?t=14"
         }
     ],
-    "femenino_normal_millennial": [
-        {
-            "titulo": "Alanis Morissette - You Oughta Know",
-            "youtube_id": "NPcyTyilmYY",
-            "url": "https://www.youtube.com/watch?v=NPcyTyilmYY"
-        },
-        {
-            "titulo": "No Doubt - Just a Girl",
-            "youtube_id": "PHzOOQfhPFg",
-            "url": "https://www.youtube.com/watch?v=PHzOOQfhPFg"
-        }
-    ]
+    
 }
 
 # Canciones especiales por categoría de IMC (tienen prioridad intermedia)
 CANCIONES_ESPECIALES_IMC = {
     "obesidad": [
         {
-            "titulo": "Wisin & Yandel - Oye Gelda",
+            "titulo": "Oye Gelda",
             "youtube_id": "9Z0hmnHnRR8",
-            "url": "https://www.youtube.com/watch?v=9Z0hmnHnRR8"
+            "url": "https://youtu.be/KhnqGEPyBUg?t=8"
         },
         {
-            "titulo": "Violeta Parra - Mazúrquica Modérnica",
+            "titulo": "Somewhere over the Rainbow - Israel Kamakawiwoole",
             "youtube_id": "5F4wZWfSdD8",
-            "url": "https://www.youtube.com/watch?v=5F4wZWfSdD8"
+            "url": "https://youtu.be/V1bFr2SWP1I?t=16"
         },
         {
             "titulo": "La Sonora Dinamita - El Gordito Bonito",
@@ -197,6 +190,22 @@ CANCIONES_ESPECIALES_IMC = {
             "youtube_id": "rs6Y4kZ8qtw",
             "url": "https://www.youtube.com/watch?v=rs6Y4kZ8qtw"
         }
+    ],
+    "sobrepeso": [
+        {
+            "titulo": "Megapanza - yo como lechon",
+            "youtube_id": "9Z0hmnHnRR8",
+            "url": "https://youtu.be/UW1DjRSuU4g?t=125"
+            
+        },
+        {
+           "titulo": "Megapanza - i love roquefort",
+            "youtube_id": "YbJOTdZBX1g",    
+            "url": "https://youtu.be/UW1DjRSuU4g?t=102"
+        },
+        
+
+
     ]
     # "normal" y "sobrepeso" usarán las canciones normales por generación
 }
