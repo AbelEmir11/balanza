@@ -51,7 +51,7 @@ class UserData(BaseModel):
 MEMES = {
     "bajo_peso": [
        {
-            "url":"https://www.bing.com/images/search?view=detailV2&ccid=DRSXLYH%2f&id=49F4F9618BD90B07D64E936EA1702F28DF82A5E4&thid=OIP.DRSXLYH_M7X8pcyU9sccaAHaH5&mediaurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f12%2fc4%2f85%2f12c485bc197d4108091d532ecb632177.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.0d14972d81ff33b5fca5cc94f6c71c68%3frik%3d5KWC3ygvcKFukw%26pid%3dImgRaw%26r%3d0&exph=1494&expw=1400&q=personaje+alto+y+flaco&FORM=IRPRST&ck=270E2E7EDEC647B7C9A6D26FAA15ABFB&selectedIndex=0&itb=0",
+            "url":"https://tse3.mm.bing.net/th/id/OIP.KzPziULMZOlmS7Kelg-4swHaHa?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
             "alt": "Meme de persona delgada"
         },
         {
@@ -90,9 +90,11 @@ MEMES = {
         },
     ],
     "obesidad": [
+
         {
-            "url": "https://th.bing.com/th/id/R.ee54ac4cbf9388419bd5b87a46c0c70c?rik=ndTVn4SFdW1X7w&riu=http%3a%2f%2fimages3.memedroid.com%2fimages%2fUPLOADED218%2f62c388abd26f1.jpeg&ehk=mRoRzLWWdfOjVu%2fP8LK9%2fah580lbWFeJ3t5PGxErsZI%3d&risl=&pid=ImgRaw&r=0",
-            "alt": "Meme motivacional obesidad"
+            "url": "https://i.pinimg.com/736x/cc/1f/a4/cc1fa4163a5a3d397df271e321906dc4--nicholas-dagosto-funny-cats.jpg",
+            "alt": "Meme gordito feliz"
+
         },
         {
             "url": "https://tse3.mm.bing.net/th/id/OIP.San-p5QVCbZ_frq3X5St-wHaIm?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -101,7 +103,16 @@ MEMES = {
         {
             "url": "https://http2.mlstatic.com/D_NQ_NP_994628-MLM76997310240_062024-O.webp",
             "alt": "Meme más que un número"
+        },
+        {
+            "url": "https://images7.memedroid.com/images/UPLOADED953/60f5fe4a91b80.jpeg",
+            "alt": "gorda bondiola"
+        },
+        {
+            "url": "https://tse2.mm.bing.net/th/id/OIP.odf6UQnxN9EWuZ0nhfuwkwAAAA?r=0&cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3",
+            "alt": "gordo bondiola"
         }
+        
     ]
 }
 
@@ -172,23 +183,7 @@ CANCIONES_ESPECIALES_IMC = {
             "url": "https://www.youtube.com/watch?v=kpSFE88dCQ8"
         }
     ],
-    "bajo_peso": [
-        {
-            "titulo": "Daddy Yankee - Gasolina",
-            "youtube_id": "qGKrc3A6HHM",
-            "url": "https://www.youtube.com/watch?v=qGKrc3A6HHM"
-        },
-        {
-            "titulo": "Alvaro Soler - El Mismo Sol",
-            "youtube_id": "1juts-h7VzU",
-            "url": "https://www.youtube.com/watch?v=1juts-h7VzU"
-        },
-        {
-            "titulo": "Manu Chao - Me Gustas Tu",
-            "youtube_id": "rs6Y4kZ8qtw",
-            "url": "https://www.youtube.com/watch?v=rs6Y4kZ8qtw"
-        }
-    ],
+    
     "sobrepeso": [
         {
             "titulo": "Megapanza - yo como lechon",
